@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易计算</title>
+</head>
+<body>
+        <script type="text/javascript">
+            function count(p){
+          
+             //获取第一个输入框的值
+             var a = parseInt(document.getElementById("a").value);
+             //获取第二个输入框的值
+             var b = parseInt(document.getElementById("b").value);
+             //获取选择框的值
+             var s = document.getElementById("z");
+             var s = document.getElementById("x");
+             var s = document.getElementById("v");
+             var s = document.getElementById("m");
+             //获取通过下拉框来选择的值来改变加减乘除的运算法则
+             var rs;
+             switch(p){
+                 case "+":
+              
+                   rs =Number(a)+Number(b);
+                   break;
+                 case "-":
+                   rs = a - b;
+                   break;
+                 case "*":
+                   rs = a * b;
+                   break;
+                 case "/":
+                   rs = a / b;
+                   break;
+                 default: 
+                   alert("error");
+             }
+             //设置结果输入框的值 
+             document.getElementById("c").value = rs;
+            }
+           </script> 
+          </head> 
+          <body>
+                <h3 align="center">加减乘除运算</h3>
+                <div id="" align="center">
+                <form>
+                第一个数<input type="number" id="a" ><br/>
+                第二个数<input type="number" id="b" ><br/>
+                        <input type="button" value="+" id="z" onclick="count('+')" >
+                        <input type="button" value="-" id="x" onclick="count('-')" >
+                        <input type="button" value="*" id="v" onclick="count('*')" >
+                        <input type="button" value="/" id="m" onclick="count('/')" >
+                        <br/>
+                计算结果<input type="number" id="c" ><br/><!--结果-->
+                </form>
+                </div>
+</body>
+</html>
